@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add teacher{% endblock %}
+
+{% block body %}
+<div class="container-fluid mt-3">
+    <h2 class = "text-center mt-2">Add Teacher</h2>
+    <div class = "col-md-7"></div>
+        {{form_start (form) }}
+            <div class="form-gourp">
+                {{ form_label (form.name)}}
+                {{ form_widget (form.name,
+                    {
+                        'attr' : {'class' : 'form-control'}
+                    }
+                )}}
+            </div>
+            <div class="form-gourp">
+                {{ form_label (form.age)}}
+                {{ form_widget (form.age,
+                    {
+                        'attr' : {'class' : 'form-control'}
+                    }
+                )}}
+            </div>
+            <div class="form-gourp">
+                {{ form_label (form.birthplace)}}
+                {{ form_widget (form.birthplace,
+                    {
+                        'attr' : {'class' : 'form-control'}
+                    }
+                )}}
+            </div>
+            <div class="form-gourp">
+                {{ form_label (form.gmail)}}
+                {{ form_widget (form.gmail,
+                    {
+                        'attr' : {'class' : 'form-control'}
+                    }
+                )}}
+            </div>
+            <div class="form-gourp">
+                {{ form_label (form.course)}}
+                {{ form_widget (form.course,
+                    {
+                        'attr' : {'class' : 'form-control'}
+                    }
+                )}}
+            </div>
+            <div class="form-group text-center mt-3">
+                <button type="submit" class="btn btn-primary"> Add</button>
+                <td><a class="btn btn-danger" href="{{ path('teacher_index')}}"> Back</a></td>
+            </div>
+        {{form_end (form) }}
+    </div
+</div
+
+{% endblock %}
